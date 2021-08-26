@@ -13,7 +13,7 @@ function UserDetails({ details, loading }) {
 
   return (
     <tbody>
-      <tr>
+      <tr className="text-center align-middle">
         <td>
           <Image
             src={details.avatar_url}
@@ -22,7 +22,9 @@ function UserDetails({ details, loading }) {
             roundedCircle
           />
         </td>
-        <td>{details.login}</td>
+        <td>
+          <a href={details.html_url}>{details.login}</a>
+        </td>
         <td>{details.name}</td>
         <td>{details.email}</td>
         <td>{details.location}</td>
